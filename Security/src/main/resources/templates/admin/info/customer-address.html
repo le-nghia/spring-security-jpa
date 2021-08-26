@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head>
+
+    <title>Gentelella Alela! | </title>
+
+    <th:block th:include="/admin/title/admin :: header"></th:block>
+
+    <style>
+
+      .modal-content .modal-header {
+        padding: 0.5rem 1rem;
+        background: #e9ecef;
+      }
+      .modal-content .modal-body {
+        padding-bottom: 0.5rem;
+      }
+
+      .ekko-lightbox .modal-body {
+        padding: 0.5rem;
+      }
+      .ekko-lightbox .modal-header {
+        height: 0;
+        border: none;
+        position: relative;
+        padding: 0;
+        z-index: 1;
+      }
+
+      .ekko-lightbox .modal-header .close span {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        border: 1px solid #6c757d;
+        background: black;
+        border-radius: 50%;
+        padding: 0px 5px 4px 5px;
+        font-size: 1.2rem;
+      }
+      .ekko-lightbox .modal-header .close:hover span {
+        background: #212529;
+      }
+
+    </style>
+
+  </head>
+
+  <body class="nav-md">
+    <div class="container body cropper">
+      <div class="main_container">
+
+        <th:block th:include="/admin/title/admin::saibar"> </th:block>
+
+        <!-- top navigation -->
+        <th:block th:include="/admin/title/admin :: _navbar"> </th:block>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3> Tables <small>Information Customer</small></h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row" style="display: block;">
+
+          </div>
+            </div>
+
+        <!-- /page content -->
+          <div class="row">
+
+            <!-- Tables Customer  -->
+            <div class="col-md-12 col-sm-12 ">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Tables <small>Customer</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Settings 1</a>
+                        <a class="dropdown-item" href="#">Settings 2</a>
+                      </div>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="card-box table-responsive">
+                        <p class="text-muted font-13 m-b-30">
+                          KeyTable provides Excel like cell navigation on any table. Events (focus, blur, action etc) can be assigned to individual cells, columns, rows or all cells.
+                        </p>
+
+                        <table id="datatable-keytable" class="table table-striped table-bordered" style="width:100%">
+                          <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                          </tr>
+                          </thead>
+
+
+                          <tbody>
+                          <tr>
+                            <th>Tiger Nixon</th>
+                            <th>System Architect</th>
+                            <th>Edinburgh</th>
+                            <th>61</th>
+                            <th>2011/04/25</th>
+                            <th>$320,800</th>
+                          </tr>
+                          <tr>
+                            <th>Garrett Winters</th>
+                            <th>Accountant</th>
+                            <th>Tokyo</th>
+                            <th>63</th>
+                            <th>2011/07/25</th>
+                            <th>$170,750</th>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tables Address-->
+            <div class="col-md-12 col-sm-12 ">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Tables <small>Address</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                      <a style="color: #00cc00;" id="addBrandInfoModal" title="Add brand">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                      </a>
+                    </li>
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Settings 1</a>
+                        <a class="dropdown-item" href="#">Settings 2</a>
+                      </div>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="card-box table-responsive">
+                        <p class="text-muted font-13 m-b-30">
+                          KeyTable provides Excel like cell navigation on any table. Events (focus, blur, action etc) can be assigned to individual cells, columns, rows or all cells.
+                        </p>
+
+                        <table id="datatable-responsive" class="table table-striped table-bordered" style="width:100%">
+
+                          <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>City</th>
+                            <th>Commune</th>
+                            <th>District</th>
+                            <th>Other</th>
+                            <th></th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr th:each="adder : ${address}">
+                            <td >[[${adder.id}]]</td>
+                            <td th:utext="${adder.city}"></td>
+                            <td th:utext="${adder.commune}"></td>
+                            <td th:utext="${adder.district}"></td>
+                            <td th:utext="${adder.other}"></td>
+
+                            <td class="float-right" >
+                              <a href="#" style="color: #027de7;" title="update brand">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                </svg>
+                              </a> |
+                              <a class="delete-btn" th:data-name="${adder.city}" th:data-id="${adder.id}" style="color: red;" title="delete brand"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                              </svg>
+                              </a>
+                            </td>
+                          </tr>
+                          </tbody>
+
+                        </table>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- Modal Confirm Deleting Brand -->
+          <div class="modal fade" id="confirmDeleteModal" >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Delete Brand</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Do you want to delete <b id="deletedBrandName"></b> ?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary" id="deleteSubmitBtn">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+
+      </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="brandInfoModal">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+          <form id="brandInfoForm" role="form" enctype="multipart/form-data">
+            <div class="modal-header">
+              <h5 class="modal-title">Add New Customer</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <div class="form-group ">
+                <label for="customerid">Customer Id </label>
+                <input type="text" class="form-control" name="customerid" id="customerid" placeholder="Customer ID" readonly>
+              </div>
+
+              <div class="form-group">
+                <label for="customername">Customer Name <span class="required-mask">(*): </span></label>
+                <input type="text" class="form-control" id="customername" name="customername" placeholder="Customer Name..." autofocus>
+              </div>
+
+              <div class="form-group" >
+                <label for="age">Age: </label>
+                <input type="number" class="form-control" name="age" id="age" placeholder="Age with you...">
+              </div>
+
+            </div>
+            <div class="modal-footer" id="enforce">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary" id="saveBrandBtn">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <th:block th:include="/admin/title/admin::_footer"> </th:block>
+
+  <script>
+    const $brandInfoForm = $('#brandInfoForm');
+    const $brandInfoModal = $('#brandInfoModal');
+    // Show add brand modal
+    $('#addBrandInfoModal').on('click', function() {
+      // resetFormModal($brandInfoForm);
+      showModalWithCustomizedTitle($brandInfoModal, "Add New Brand");
+      $('#customerid').closest(".form-group").addClass("d-none");
+      console.log("Add run...");
+    });
+
+    // Show delete brand confirmation modal
+    $("#datatable-responsive").on('click', '.delete-btn', function() {
+      console.log('Delete customer');
+      $('#deletedBrandName').text($(this).data("name"));
+      $('#deleteSubmitBtn').attr("data-id", $(this).data("id"));
+      $('#confirmDeleteModal').modal('show');
+
+    });
+
+    /**
+     * Add title for selected modal after that show modal
+     * @param $selectedModal
+     * @param title
+     */
+    function showModalWithCustomizedTitle($selectedModal, title) {
+      $selectedModal.find(".modal-title").text(title);
+      $selectedModal.modal('show');
+    }
+
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head>
+    <title>Welcome | Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <th:block th:include="/title/link :: headerLink"></th:block>
+  </head>
+  <body>
+
+  <div class="container">
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+        <!-- Icon -->
+        <!--<div class="fadeIn first">
+          <img src="/static/image/favicon.ico" id="icon" alt="User Icon" />
+          <span>LOGIN</span>
+        </div>
+-->
+        <!-- Login Form -->
+        <form style="color: grey;" th:action="@{/check_in}" method="post">
+
+          <label for="userName"></label>
+          <input type="text" id="userName" class="fadeIn second" name="userName" placeholder="UserName" autofocus>
+
+          <label for="password"></label>
+          <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+
+          <!--<th:block th:if="${#session != null && #session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION') != null}">
+            <div th:if= "${#request.getParameter('error') == 'true'}"
+                 style="color: red; margin: 10px 0px;">
+              <span style="margin: 0 0 0 33px; float: left;"> Loi</span>
+            </div>
+          </th:block>-->
+
+          <div style="color: #ea2858;" th:if="${param.error}">
+            Invalid username and password.
+          </div>
+
+          <br>
+          <input type="submit" class="fadeIn fourth" value="Log In">
+          <!--<button type="submit" class="fadeIn fourth">Sign in</button>-->
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+          <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+
+        <!--<span class="error-message" th:utext="${error}"></span>-->
+      </div>
+    </div>
+
+    <th:block th:include="/title/link :: footer"></th:block>
+
+  </div>
+
+
+  </body>
+</html>

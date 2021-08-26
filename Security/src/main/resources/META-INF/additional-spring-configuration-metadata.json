@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "parent.folder.images.brand",
+      "type": "java.lang.String",
+      "description": "Description for parent.folder.images.brand."
+  }
+] }
